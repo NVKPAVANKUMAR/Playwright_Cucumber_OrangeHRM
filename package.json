@@ -1,0 +1,31 @@
+{
+  "name": "playwright_orangehrm_js",
+  "version": "1.0.0",
+  "description": "Orange HRM demo portal automation with playwright and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js --require cucumber.js --publish-quiet",
+    "test:allure": "npx cucumber-js --require cucumber.js --format ./setup/reporters/allure.js --publish-quiet",
+    "report-simple-cucumber": "node ./setup/reporters/reporter-1.js",
+    "report-multiple-cucumber": "node ./setup/reporters/reporter-2.js",
+    "allure-generate": "node node_modules/allure-commandline/bin/allure generate -c",
+    "allure-open": "node node_modules/allure-commandline/bin/allure open"
+  },
+  "keywords": [],
+  "author": "NVK PAVANKUMAR",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.38.0",
+    "@types/node": "^20.6.3",
+    "allure-cucumberjs": "^2.8.1",
+    "allure-js-commons": "^2.8.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "allure-commandline": "^2.24.0",
+    "chai": "^4.3.8",
+    "cucumber-html-reporter": "^6.0.0",
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  }
+}
